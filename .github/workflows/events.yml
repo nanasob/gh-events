@@ -2,7 +2,7 @@ name: Events Pipeline
 on:
   pull_request:
     types: opened
-  workforce_dispatch:
+  workflow_dispatch:
 jobs:
   Pre_Test:
     runs-on: ubuntu_latest
