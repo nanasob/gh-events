@@ -5,13 +5,13 @@ on:
       - opened
   workflow_dispatch:
 jobs:
-  Pre_Test:
-    runs-on: ubuntu_latest
+  info:
+    runs-on: ubuntu-latest
     steps:
-      - name: Print Event
-        run: echo "Welcome to github event"
+      - name: Output Github context
+        run: echo "${{ toJSON(github) }}"
   Test:
-    needs: Pre_Test
+    needs: info
     runs-on: ubuntu_latest
     steps:
       - name: Checkout code
