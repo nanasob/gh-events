@@ -1,8 +1,6 @@
 name: Events Pipeline
 on:
-  pull_request:
-    types:
-      - opened
+  push:
   workflow_dispatch:
 jobs:
   info:
